@@ -6,25 +6,21 @@ namespace PracticeProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("entre a value of a:");
-            int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("enter a value of b:");
-            int b = int.Parse(Console.ReadLine());
-            Console.WriteLine("Before Swapping Values of a & b:");
-            Console.WriteLine($"a={a} \t b={b}");
-            SwapNo(a, b);
+            Console.WriteLine("enter a no");
+            int n = int.Parse(Console.ReadLine());
+            EvenOdd(n);
         }
-        public static void SwapNo(int x, int y)
+        public static void EvenOdd(int no)
         {
-            int a = x;
-            int b = y;
-            int temp = a;
-            a = b;
-            b = temp;
-            Console.WriteLine("after Swaping :");
-            Console.WriteLine($"a={a} \t b={b}");
 
-
+            if (no % 2 == 0)
+            {
+                Console.WriteLine("no is even");
+            }
+            else
+            {
+                Console.WriteLine("no is odd");
+            }
         }
     }
 }
