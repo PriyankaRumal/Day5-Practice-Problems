@@ -6,14 +6,16 @@ namespace PracticeProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("entre a no:");
-            int n = int.Parse(Console.ReadLine());
-            int fact = 1;
-            for (int i = 1; i <= n; i++)
-            {
-                fact = fact * i;
-            }
-            Console.WriteLine($"Factorial of {n} is {fact}");
+
+            Console.WriteLine("enter dividend:");
+            int div = int.Parse(Console.ReadLine());
+            Console.WriteLine("entre divisor:");
+            int divisor = int.Parse(Console.ReadLine());
+            int quotient = div / divisor;
+            int rem = div % divisor;
+            Console.WriteLine($" Qutient :{quotient}");
+            Console.WriteLine($" Remender :{rem}");
+
         }
     }
 }
