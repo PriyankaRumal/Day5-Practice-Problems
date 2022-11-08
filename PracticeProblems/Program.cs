@@ -7,17 +7,13 @@ namespace PracticeProblems
         static void Main(string[] args)
         {
             Console.WriteLine("entre a no:");
-            int no = int.Parse(Console.ReadLine());
-            HarmonicNum(no);
-        }
-        public static void HarmonicNum(int n)
-        {
-            double series = 0;
+            int n = int.Parse(Console.ReadLine());
+            int fact = 1;
             for (int i = 1; i <= n; i++)
             {
-                series += 1 / (float)i;
+                fact = fact * i;
             }
-            Console.WriteLine($"Harmonic number : {series}");
+            Console.WriteLine($"Factorial of {n} is {fact}");
         }
     }
 }
