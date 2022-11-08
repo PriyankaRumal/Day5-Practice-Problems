@@ -4,34 +4,22 @@ namespace PracticeProblems
 {
     internal class Program
     {
-        static int hco = 0;
-        static int tco = 0;
-
         static void Main(string[] args)
         {
-            FlipCoin(4);
+            Console.WriteLine("Enter a Year");
+            int year = int.Parse(Console.ReadLine());
+            IsleapYear(year);
         }
-        public static void FlipCoin(int n)
+        public static void IsleapYear(int n)
         {
-            int temp = n;
-            Random rnd = new Random();
-            while (n != 0)
+            if (((n % 4 == 0) && (n % 100 != 0)) || (n % 400 == 0))
             {
-                double random = rnd.NextDouble();
-                if (random <= 0.5)
-                {
-                    tco = tco + 1;
-                }
-                else
-                {
-                    hco++;
-                }
-                n = n - 1;
+                Console.WriteLine("It is a Leap Year");
             }
-            Console.WriteLine((hco * 100) / temp);
-            Console.WriteLine((tco * 100) / temp);
-
-
+            else
+            {
+                Console.WriteLine("Its not a Leap Year");
+            }
         }
     }
 }
