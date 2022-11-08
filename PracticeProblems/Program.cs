@@ -6,15 +6,24 @@ namespace PracticeProblems
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("entre a value of a:");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter a value of b:");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Before Swapping Values of a & b:");
+            Console.WriteLine($"a={a} \t b={b}");
+            SwapNo(a, b);
+        }
+        public static void SwapNo(int x, int y)
+        {
+            int a = x;
+            int b = y;
+            int temp = a;
+            a = b;
+            b = temp;
+            Console.WriteLine("after Swaping :");
+            Console.WriteLine($"a={a} \t b={b}");
 
-            Console.WriteLine("enter dividend:");
-            int div = int.Parse(Console.ReadLine());
-            Console.WriteLine("entre divisor:");
-            int divisor = int.Parse(Console.ReadLine());
-            int quotient = div / divisor;
-            int rem = div % divisor;
-            Console.WriteLine($" Qutient :{quotient}");
-            Console.WriteLine($" Remender :{rem}");
 
         }
     }
