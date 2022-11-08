@@ -6,16 +6,18 @@ namespace PracticeProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("entre a no");
+            Console.WriteLine("entre a no:");
             int no = int.Parse(Console.ReadLine());
-            int temp = no;
-            int power = 1;
-            while (no != 0)
+            HarmonicNum(no);
+        }
+        public static void HarmonicNum(int n)
+        {
+            double series = 0;
+            for (int i = 1; i <= n; i++)
             {
-                power = power * 2;
-                no--;
+                series += 1 / (float)i;
             }
-            Console.WriteLine($"Power of 2 ^ {temp} is : {power}");
+            Console.WriteLine($"Harmonic number : {series}");
         }
     }
 }
